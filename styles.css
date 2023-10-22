@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.progress-bar {
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 12px;
+  border-radius: 100vw;
+  background: linear-gradient(to right, blue, cyan);
+  animation: scale-x-up 4s cubic-bezier(0, 0, 0.12, 1) forwards;
+}
+
+.progress-number {
+  display: block;
+  text-align: right;
+  margin-top: 0.5rem;
+  font-family: monospace;
+  font-size: 1.5em;
+}
+
+button {
+  padding: 1em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+/* ANIMATIONS */
+@keyframes scale-x-up {
+  to {
+    transform: scaleX(1);
+  }
+}
